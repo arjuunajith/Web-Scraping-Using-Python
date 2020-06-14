@@ -19,5 +19,5 @@ for a in soup.findAll('a', href=True, attrs={'class': '_31qSD5'}):
     prices.append(price.text)
     ratings.append(rating.text)
 
-df = pd.DataFrame({'Product Name': products, 'Price': prices, 'Rating': ratings})
-df.to_csv('products.csv', index=False, encoding='utf-8')
+df = pd.DataFrame({'Name': products, 'Price': prices, 'Rating': ratings})
+df.to_csv('flipkart.csv', index=False, encoding='utf-8')
