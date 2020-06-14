@@ -34,8 +34,7 @@ with open('pos_data.csv','w') as new_file:
                 for post in subreddit.hot(limit=500):
                     submission = reddit.submission(id=post.id)
                     submission.comments.replace_more(limit=0)
-    # for top_comment in submission.comments:
-    #     print(top_comment.body)
+
 
                     csv_writer.writerow(['Comment'])
                     csv_writer1.writerow(['Comment'])
